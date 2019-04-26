@@ -18,14 +18,18 @@ body {
 
 .text {
   display: flex;
-  font-variant: small-caps;
   font-size: 3vw;
   line-height: 3rem;
   margin: 50px auto;
   pointer-events: none;
   text-align: center;
+  text-transform: uppercase;
   transition: font-size 0.7s cubic-bezier(0.94, 0, 0.11, 0.91);
   user-select: none;
+}
+
+.text--small {
+  font-size: 2vw;
 }
 
 .container {
@@ -53,6 +57,10 @@ body {
 
 .img-panel--open .text {
   font-size: 5vw;
+}
+
+.img-panel--open .text--small {
+  font-size: 3.5vw;
 }
 
 .img-panel--widened {
