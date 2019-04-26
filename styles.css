@@ -24,8 +24,16 @@ body {
   pointer-events: none;
   text-align: center;
   text-transform: uppercase;
-  transition: font-size 0.7s cubic-bezier(0.94, 0, 0.11, 0.91);
+  transition: all 0.7s cubic-bezier(0.94, 0, 0.11, 0.91);
   user-select: none;
+}
+
+.text:first-child {
+  transform: translateY(-100vh);
+}
+
+.text:last-child {
+  transform: translateY(100vh);
 }
 
 .text--small {
@@ -47,7 +55,7 @@ body {
   justify-content: center;
   overflow: hidden;
   position: relative;
-  transition: width 0.5s ease;
+  transition: all 0.5s cubic-bezier(0.34, 0.34, 0.21, -0.15);
   width: 100%;
 }
 
@@ -57,6 +65,11 @@ body {
 
 .img-panel--open .text {
   font-size: 5vw;
+}
+
+.img-panel--open .text:first-child,
+.img-panel--open .text:last-child {
+ transform: translateY(0); 
 }
 
 .img-panel--open .text--small {
