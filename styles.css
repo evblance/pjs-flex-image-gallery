@@ -17,9 +17,11 @@ body {
 }
 
 .text {
-  display: block;
+  display: flex;
   font-variant: small-caps;
   font-size: 3rem;
+  line-height: 3rem;
+  margin: 50px auto;
   text-align: center;
 }
 
@@ -30,10 +32,12 @@ body {
 }
 
 .img-panel {
+  align-items: center;
   background-position: center;
   background-size: cover;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
   overflow: hidden;
   width: 100%;
 }
