@@ -18,14 +18,26 @@ body {
 
 .text {
   display: flex;
-  font-variant: small-caps;
   font-size: 3vw;
   line-height: 3rem;
   margin: 50px auto;
   pointer-events: none;
   text-align: center;
-  transition: font-size 0.7s cubic-bezier(0.94, 0, 0.11, 0.91);
+  text-transform: uppercase;
+  transition: all 0.7s cubic-bezier(0.94, 0, 0.11, 0.91);
   user-select: none;
+}
+
+.text:first-child {
+  transform: translateY(-100vh);
+}
+
+.text:last-child {
+  transform: translateY(100vh);
+}
+
+.text--small {
+  font-size: 2vw;
 }
 
 .container {
@@ -43,7 +55,7 @@ body {
   justify-content: center;
   overflow: hidden;
   position: relative;
-  transition: width 0.5s ease;
+  transition: all 0.5s cubic-bezier(0.34, 0.34, 0.21, -0.15);
   width: 100%;
 }
 
@@ -55,8 +67,13 @@ body {
   font-size: 5vw;
 }
 
-.img-panel--widened {
-  width: 200%;
+.img-panel--open .text:first-child,
+.img-panel--open .text:last-child {
+ transform: translateY(0); 
+}
+
+.img-panel--open .text--small {
+  font-size: 3.5vw;
 }
 
 .img-1 {
