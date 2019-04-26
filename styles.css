@@ -19,10 +19,13 @@ body {
 .text {
   display: flex;
   font-variant: small-caps;
-  font-size: 3rem;
+  font-size: 3vw;
   line-height: 3rem;
   margin: 50px auto;
+  pointer-events: none;
   text-align: center;
+  transition: font-size 0.7s cubic-bezier(0.94, 0, 0.11, 0.91);
+  user-select: none;
 }
 
 .container {
@@ -39,7 +42,21 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+  transition: width 0.5s ease;
   width: 100%;
+}
+
+.img-panel--open {
+  width: 200%;
+}
+
+.img-panel--open .text {
+  font-size: 5vw;
+}
+
+.img-panel--widened {
+  width: 200%;
 }
 
 .img-1 {
